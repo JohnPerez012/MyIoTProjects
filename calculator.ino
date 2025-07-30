@@ -10,7 +10,7 @@
 
 	
 	BUZZER --
-	  ANODE (+) TO D13 (CAP. AT LEAST 220Ω)
+	  ANODE (+) TO D13 (resistor AT LEAST 220Ω)
 	  CATHODE (-) TO GND
 
 

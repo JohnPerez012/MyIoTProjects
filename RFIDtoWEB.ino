@@ -4,9 +4,33 @@
 #include <SPI.h>
 #include <MFRC522.h>
 
+
+/**
+	RDIF --
+	  SDA TO 15
+	  SCK TO 18
+    MOSI TO 23
+    MISO TO 19
+    RST TO 27
+    GND TO GND
+    3.3V TO 3.3V
+
+	
+	BUZZER --
+	  ANODE (+) TO 5
+	  CATHODE (-) TO GND
+
+	LED --
+	  RED: ANODE (+) TO  22
+   	GREEN: ANODE (+) TO  21
+	  CATHODE (-) TO GND (Resistor AT LEAST 220Ω)
+*/
+
+
+
 // Wi-Fi
-const char* ssid = "Ours 2.0";
-const char* password = "2cadarofam!PEREZ";
+const char* ssid = "WIFI NAME";
+const char* password = "WIFI PASSWORD";
 
 // RFID
 #define SS_PIN 15
@@ -23,7 +47,7 @@ WebServer server(80);
 bool scanningEnabled = false;
 
 // ASP.NET endpoint
-const char* serverURL = "http://192.168.254.107:5050/ReceiveRFID.aspx";
+const char* serverURL = "❌ LOCAL ADDRESS. ✅ COMPUTER'S IPV4 ADDRESS POINT TO WEB'S LOCAL FILE";
 
 void setup() {
   Serial.begin(115200);
